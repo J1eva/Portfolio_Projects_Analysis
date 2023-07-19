@@ -1,0 +1,37 @@
+Housing data cleaning SQL-->
+
+1)-->Standardize the date format-->
+#USing 'Convert/cast'
+#Using 'alter table' for altering the format yyyy-mm-dd to
+dd-mm-yyyy
+
+2)-->Working on cleaning proerty address
+we are gonna populate with same address where we find null for
+Property address.
+# we use 'ISNULL' for populating null addresses.
+#we update the table using The alias(here h1) and hence cleaning
+of property address is done.
+
+3)-->Breaking out into indivdual columns( Address, City and State)
+# we will be using substrings here and charater index/Trindex for
+sepearting the given address.
+# we now alter the tables incase of city and address....
+It helps working with the data far more easy and handy instead of 
+clustred table.
+# we do same with owner address column and make it east to use.
+We use 'PARSENAME here to sepreate the things.
+Cleaned data is owneadd, propadd
+
+4)We now need to change 'Y' and  'N' into 'Yes' and 'No' in 
+'Sold as Vacant' field
+# We are gonna use case statement for the following changes.
+# Further we Update the table and here we are done with replacing work.
+
+5)--> Removing the duplicates-->
+# we use partition by on domains to remove the duplicates 
+we deleted the duplicate values using delete and CTE.
+
+6)-->Delete unused rows-->
+ we will get rid of Owner address and TaxDistrict and property address.
+
+
