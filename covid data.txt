@@ -1,0 +1,36 @@
+covid data set about deaths-->
+we use 
+location, date ,total_cases, 
+new_cases,total_deaths,population.
+ 
+2)-->looking for total cases vs total deaths-->
+Formula--> Total cases/Total deaths *100
+for 'x' cases and 'Y' deaths we will get 'z' percentage of death.
+
+3)-->looking for countires having highest infection 
+rate compared poupulation.
+--we use MAX for highest infection rate and group by as per 
+location and population
+
+4)--> looking for countries with highest death count per 
+population.
+--we use MAX on total_deaths and aslo cast it in big int 
+for accuratue data and add where clause for showing not 
+NULL records.
+
+5) break the above calculated datas basis on continent
+
+6) breaking down to global numbers
+we need to use aggragate function.SUM
+it will not filter as per continent or location rather it will 
+filter on basis of date and give out total number of deaths 
+for that give date/per day.
+
+----JOIN THE DEATH AND VACCINATION TABLES----
+7) we have to look for total population vs total vaccination
+8) we gonna work on new vaccination records where each 
+one adds up to total number.we use partition by and windows
+function.
+9)--> we use cte/temp table for creation of percentage table for 
+people vaccinated.
+10)-->we create a view now-->for storing data for visualization
